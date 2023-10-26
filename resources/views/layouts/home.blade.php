@@ -62,25 +62,6 @@
                </a>
               </div>
             </div>
-
-            <div class="task">
-              <div class="title">
-                <input type="checkbox" />
-                <div class="task_title">Título da tarefa</div>
-              </div>
-              <div class="priority">
-                <div class="sphere"></div>
-                <div>Título da tarefa</div>
-              </div>
-              <div class="actions">
-               <a href="#">
-                <img src="/assets/images/icon-edit.png" alt="">
-               </a>
-               <a href="#">
-                <img src="/assets/images/icon-delete.png" alt="">
-               </a>
-              </div>
-            </div>
           </div>
         </section>
       </main>

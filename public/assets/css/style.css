@@ -45,6 +45,10 @@ nav {
 .btn {
   padding: 20px 30px;
   border-radius: 10px;
+  transition: all .5s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.05);
 }
 a.btn {
   text-decoration: none;
@@ -134,9 +138,13 @@ h2 {
   padding: 30px 15px;
   margin-bottom: 10px;
   border-bottom: 1px solid var(--background-light);
+  transition: all 0.3s ease-in-out;
 }
 .task:hover {
   background-color: var(--background-light);
+  transform: scale(1.05);
+  border-radius: 10px;
+  overflow: hidden;
 }
 .title {
   display: flex;
@@ -156,6 +164,10 @@ h2 {
 .actions a {
   margin-left: 10px;
   margin-right: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.actions>a:hover {
+  transform: scale(2.05s);
 }
 .sphere {
   width: 22px;
