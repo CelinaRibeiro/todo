@@ -52,6 +52,7 @@ nav {
 }
 a.btn {
   text-decoration: none;
+  margin-left: 10px;
 }
 .btn-primary {
   background-color: var(--color-primary);

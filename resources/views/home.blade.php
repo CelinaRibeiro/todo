@@ -1,8 +1,9 @@
 <x-layout>
 
 <x-slot:btn>
-  <a href="#" class="btn btn-primary">Criar tarefa</a>
+  <a href="#" class="btn btn-primary">Criar tarefa 1</a>
 </x-slot:btn>
+
 
 <section class="graph">
     <div class="graph_header">
@@ -32,24 +33,31 @@
       </select>
     </div>
     <div class="task_list">
-      <div class="task">
-        <div class="title">
-          <input type="checkbox" />
-          <div class="task_title">Título da tarefa</div>
-        </div>
-        <div class="priority">
-          <div class="sphere"></div>
-          <div>Título da tarefa</div>
-        </div>
-        <div class="actions">
-          <a href="#">
-          <img src="/assets/images/icon-edit.png" alt="">
-          </a>
-          <a href="#">
-          <img src="/assets/images/icon-delete.png" alt="">
-          </a>
-        </div>
-      </div>
+        @php
+          $tasks = [           
+            [
+            'id' => 1,
+            'done' => true, 
+            'title' => 'Minha primeira task', 
+            'category' => 'Categoria 1',
+            // 'delete_url' => '#',
+            // 'edit_url' => '#'
+            ],
+
+            [
+            'id' => 2,
+            'done' => false, 
+            'title' => 'Minha segunda task', 
+            'category' => 'Categoria 2',
+            // 'delete_url' => '#',
+            // 'edit_url' => '#'
+            ],
+          ]
+        @endphp
+
+     <x-task :data=$tasks[0] />
+     <x-task :data=$tasks[1] />
+
     </div>
   </section>
 </x-layout>
