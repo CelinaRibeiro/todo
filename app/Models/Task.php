@@ -14,7 +14,7 @@ class Task extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'description', 'due_date', 'category_id', 'user_id'];
+    protected $fillable = ['is_done', 'title', 'description', 'due_date', 'category_id', 'user_id'];
 
     //Uma tarefa SEMPRE vai pertencer a um único usuário 
     public function user()
