@@ -9,9 +9,9 @@ use App\Http\Controllers\{
 };
 
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->middleware('auth')->name('home');
 
-Route::prefix('/task')->group(function() {
+Route::middleware('auth')->prefix('/task')->group(function() {
     Route::get('/index', [TaskController::class, 'index'])->name('tasks.index');
     Route::get('/create', [TaskController::class, 'create'])->name('tasks.create');
     Route::post('/store', [TaskController::class, 'store'])->name('tasks.store');
@@ -24,4 +24,5 @@ Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'login_action'])->name('login_action');
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/register', [AuthController::class, 'register_action'])->name('user.register_action');
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth')->name('logout');
