@@ -192,11 +192,11 @@ h2 {
 
 
 /* task */
-#create_task_section {
+#task_section {
   margin: auto;
   padding-top: 15px;
 }
-#create_task_section h1 {
+#task_section h1 {
   text-align: center;
   margin-bottom: 10px;
 }

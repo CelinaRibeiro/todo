@@ -3,25 +3,35 @@
     <a href="{{ route('home') }}" class="btn btn-primary">Voltar</a>
   </x-slot:btn>
  
-<section id="create_task_section">
+<section id="task_section">
   <h1>Criar tarefa</h1>
-  <form action="">
+  <form action="{{ route('tasks.store')}}" method="post">
+    @csrf
 
+    <x-form.text_input 
+    name="title" 
+    label="Título da tarefa" 
+    required="required" 
+    placeholder="Digite o título da tarefa" />
 
-    <x-form.text_input name="title" label="Título da tarefa" required="required" placeholder="Digite o título da tarefa" />
-
-    <x-form.text_input type="date" name="due-data" label="Data de relaização" required="required" />
+    <x-form.text_input 
+    type="datetime-local"  
+    name="due_date" 
+    label="Data de relaização" 
+    required="required" />
 
     <x-form.select_input 
-      name="category" 
-      label="Categoria">
-      <option>Valor qualquer</option>
+    name="category_id" 
+    label="Categoria">
+    @foreach ($categories as $category)
+      <option value="{{$category->id}}">{{ $category->title}}</option>
+    @endforeach
     </x-form.select_input>
 
    <x-form.textarea_input 
-      name="description" 
-      label="Descrição"
-      placeholder="Digite uma descrição para a tarefa"
+    name="description" 
+    label="Descrição"
+    placeholder="Digite uma descrição para a tarefa"
    />
 
    <x-form.form-button resetTxt="Limpar" submitTxt="Criar tarefa"></x-form.form-button>
