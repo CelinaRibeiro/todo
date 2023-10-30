@@ -20,6 +20,7 @@
 
    <x-form.textarea_input 
       name="description" 
+      label="Descrição"
       placeholder="Digite uma descrição para a tarefa"
    />
 
