@@ -17,7 +17,7 @@
     <x-form.text_input 
     type="datetime-local"  
     name="due_date" 
-    label="Data de relaização" 
+    label="Data de realização" 
     required="required" />
 
     <x-form.select_input 

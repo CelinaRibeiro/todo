@@ -1,7 +1,8 @@
 <x-layout>
 
 <x-slot:btn>
-  <a href="#" class="btn btn-primary">Criar tarefa 1</a>
+  <a href="{{route('tasks.create')}}" class="btn btn-primary">Criar tarefa</a>
+  <a href="{{route('logout')}}" class="btn btn-primary">Sair</a>
 </x-slot:btn>
 
 
