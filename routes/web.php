@@ -18,6 +18,8 @@ Route::middleware('auth')->prefix('/task')->group(function() {
     Route::get('/edit/{id}', [TaskController::class, 'edit'])->name('tasks.edit');
     Route::put('/update/{id}', [TaskController::class, 'update'])->name('tasks.update');
     Route::get('/destroy/{id}', [TaskController::class, 'destroy'])->name('tasks.destroy');
+
+    Route::post('/upTask', [TaskController::class, 'upTask'])->name('tasks.upTask');
 });
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
